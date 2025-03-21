@@ -1,0 +1,49 @@
+
+<div class="incident-card" *ngFor="let incidencia of incidencias">
+    <div class="incident-content">
+        <h3>{{incidencia.elemento}}</h3>
+        <p class="address">{{incidencia.ubicacion}}</p>
+        <p class="description">{{incidencia.observaciones}}</p>
+        
+        <!-- TODO: ver detalles de la incidencia -->
+        <!-- <button (click)="verDetalles(incidencia)">VER DETALLES</button> -->
+        
+    </div>
+    <div class="incident-status">
+        <span class="status-badge en-progreso">{{incidencia.estado}}</span>
+      <p class="time">Hace 5h</p>   
+    </div>
+</div> 
+
+
+
+
+<!-- <div class="incident-card">
+    <div class="incident-content">
+        <h3>Fuga de agua en arqueta</h3>
+        <p class="address">Av. Principal 123</p>
+        <p class="description">Arqueta con fugas en los laterales, por lo cual no drena.</p>
+    </div>
+    <div class="incident-status">
+        <span class="status-badge averia">Avería</span>
+        <p class="time">Hace 2h</p>
+    </div>
+</div>
+
+<div class="incident-card">
+    <div class="incident-content">
+        <h3>Tapa dañada</h3>
+        <p class="address">Calle Secundaria 456</p>
+        <p class="description">Arqueta completamente bloqueada causando acumulación de agua en la calle.</p>
+    </div>
+    <div class="incident-status">
+        <span class="status-badge en-progreso">En progreso</span>
+        <p class="time">Hace 5h</p>
+    </div>
+</div> -->
+
+
+
+
+
+
