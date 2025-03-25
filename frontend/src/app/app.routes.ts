@@ -14,6 +14,6 @@ export const routes: Routes = [
     {path: 'footer', component: FooterComponent},
     {path: 'map', component: MapComponent},
     {path: 'listado', component: ListadoComponent},
-    {path: 'detalles-incidencia/:id', component: DetallesIncidenciaComponent}
+    {path: 'detalles-incidencia/:id', component: DetallesIncidenciaComponent},
     {path: 'edit-incidencia/:id', component: EditIncidenciaComponent}
 ];

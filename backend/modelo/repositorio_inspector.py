@@ -43,3 +43,17 @@ def registrar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, 
     conexion.commit()
     cursor.close()
     conexion.close()
+    
+def actualizar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones, id):
+    
+    conexion = modelo.conexion.conectar()
+    sql = "UPDATE incidencias SET elemento = %s, instalacion = %s, ubicacion = %s, tipo = %s, estado = %s, fecha = %s, observaciones = %s WHERE incidencias.id = %s"
+    values = ( elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones, id)
+    cursor = conexion.cursor()
+    cursor.execute(sql, values)
+    
+    print(f"--BACKEND--  instalacion: " + instalacion + " id= " + str(id))
+    
+    conexion.commit()
+    cursor.close()
+    conexion.close()

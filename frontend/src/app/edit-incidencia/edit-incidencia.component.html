@@ -20,7 +20,7 @@
           </div>
           <div class="installation-address">
             <span class="material-icons location-icon">location_on</span>
-            <input type="text" class="form-input" name="instalacion"  placeholder="Dirección de la instalación" [(ngModel)]="incidencia.ubicacion">
+            <input type="text" class="form-input" name="ubicacion"  placeholder="Dirección de la instalación" [(ngModel)]="incidencia.ubicacion">
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@
 
       <div class="form-actions">
         <!-- (click)="confirmarEdicion() -->
-        <button type="button" class="submit-button" >Guardar registro</button>
+        <button type="submit" class="submit-button"(click)="confirmarEdicion()" >Guardar registro</button>
         <button type="button" class="close-button" (click)="close()">Cancelar</button>
       </div>
     </form>
