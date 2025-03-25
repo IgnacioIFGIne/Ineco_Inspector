@@ -31,6 +31,7 @@ export class EditIncidenciaComponent {
 
   actualizarOk():void{
     alert("incidencia actualizada con exito");
+    this.dialogRef.close();
   }
 
   close(): void {

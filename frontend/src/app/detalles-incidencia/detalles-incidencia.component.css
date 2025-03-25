@@ -219,6 +219,9 @@ button {
 .btn-primary:hover {
   background-color: #1e3a8a;
 }
+.btn-outline:hover {
+  background-color: #4467c5;
+}
 
 .bg-gray-100 {
   background-color: var(--color-gray-100);

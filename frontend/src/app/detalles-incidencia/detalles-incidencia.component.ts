@@ -5,10 +5,11 @@ import { InspectorService } from '../services/inspector.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EditIncidenciaComponent } from '../edit-incidencia/edit-incidencia.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-detalles-incidencia',
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, MapComponent],
   templateUrl: './detalles-incidencia.component.html',
   styleUrl: './detalles-incidencia.component.css'
 })
@@ -40,8 +41,5 @@ export class DetallesIncidenciaComponent {
 
   }
   
-  
-
-
 
 }
