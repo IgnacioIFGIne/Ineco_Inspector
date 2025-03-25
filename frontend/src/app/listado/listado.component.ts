@@ -24,8 +24,8 @@ export class ListadoComponent {
     this.servicioInspector.getIncidencias().subscribe(incident => this.incidencias = incident);
   }
 
-  verDetalles(): void {
-    this.router.navigate(['/detalles-incidencia']);
+  verDetalles(incidencia: Incidencia): void {
+    this.router.navigate(['/detalles-incidencia', incidencia.id]);
   }
 
 }

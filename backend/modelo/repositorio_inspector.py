@@ -1,6 +1,6 @@
 import modelo.conexion
 
-# todoo
+#-------------------METODOS GET-------------------
 def obtener_incidencias():
     conexion = modelo.conexion.conectar()
     sql = "SELECT * FROM incidencias"
@@ -16,6 +16,23 @@ def obtener_incidencias():
   
   
     return incidencias
+    
+def obtener_incidencia_id(id):
+    conexion = modelo.conexion.conectar()
+    sql = "SELECT * FROM incidencias WHERE id = %s"
+    cursor = conexion.cursor(dictionary=True)
+    cursor.execute(sql, (id,))
+    incidencia = cursor.fetchone()
+    cursor.close()
+    conexion.close()
+    
+    print(incidencia["elemento"], incidencia["instalacion"], incidencia["ubicacion"], incidencia["tipo"], incidencia["estado"])
+  
+    return incidencia
+
+
+#-------------------METODOS POST-------------------
+
 
 def registrar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones):
     conexion = modelo.conexion.conectar()

@@ -21,6 +21,11 @@ export class InspectorService {
     registrarIncidencia(incidencia: Incidencia): Observable<String> {
         return this.http.post<string>(this.ruta_rest_services + 'rest/registrar_incidencia', incidencia);
     }
+
+    //obtener incidencia por id
+    getIncidencia_id(id: number): Observable<Incidencia> {
+        return this.http.get<Incidencia>(this.ruta_rest_services + 'rest/obtener_incidencia_id?id=' + id);
+    }
     
 
 

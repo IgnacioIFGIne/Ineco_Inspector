@@ -37,29 +37,29 @@
           <div class="details-column">
             <div class="detail-item">
               <h3>Elemento</h3>
-              <p>Ventana</p>
+              <p>{{incidencia.elemento}}</p>
             </div>
             <div class="detail-item">
               <h3>Instalación</h3>
-              <p>Instalacion B</p>
+              <p>{{incidencia.instalacion}}</p>
             </div>
             <div class="detail-item">
               <h3>Ubicación</h3>
-              <p>Edificio 3</p>
+              <p>{{incidencia.ubicacion}}</p>
             </div>
           </div>
           <div class="details-column">
             <div class="detail-item">
               <h3>Tipo</h3>
-              <p>Cristal roto</p>
+              <p>{{incidencia.tipo}}</p>
             </div>
             <div class="detail-item">
               <h3>Estado</h3>
-              <p class="status-resolved">Resuelto</p>
+              <p class="status-resolved">{{incidencia.estado}}</p>
             </div>
             <div class="detail-item">
               <h3>Fecha</h3>
-              <p>18/03/2025</p>
+              <p>{{incidencia.fecha}}</p>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="detail-item">
           <h3>Observaciones</h3>
           <div class="observation-box">
-            <p>El cristal de la ventana se rompió debido al viento fuerte durante la tormenta.</p>
+            <p>{{incidencia.observaciones}}</p>
           </div>
         </div>
 
@@ -83,7 +83,7 @@
     <!-- Botones de acción -->
     <div class="actions">
       <button class="btn-outline">Cancelar</button>
-      <button class="btn-primary">Editar incidencia</button>
+      <button (click)="editarIncidencia(incidencia) class="btn-primary">Editar incidencia</button>
     </div>
   </div>
 </body>

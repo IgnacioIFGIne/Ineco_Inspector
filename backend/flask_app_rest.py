@@ -41,3 +41,11 @@ def registrar_incidencia():
         modelo.repositorio_inspector.registrar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones)
         
         return jsonify("ok")
+    
+    
+@app.route(ruta_servicios_rest + "/obtener_incidencia_id", methods=["GET"])
+def obtener_incidencia_id():
+    id = request.args.get("id")
+    incidencia = modelo.repositorio_inspector.obtener_incidencia_id(id)
+    return jsonify(incidencia)
+     

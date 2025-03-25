@@ -1,12 +1,12 @@
 
-<div class="incident-card" *ngFor="let incidencia of incidencias">
+<div class="incidencia" *ngFor="let incidencia of incidencias">
     <div class="incident-content">
         <h3>{{incidencia.elemento}}</h3>
         <p class="address">{{incidencia.ubicacion}}</p>
         <p class="description">{{incidencia.observaciones}}</p>
         
-        <!-- TODO: ver detalles de la incidencia -->
-        <button (click)="verDetalles()">VER DETALLES</button>   
+        <!--ver detalles de la incidencia -->
+        <button (click)="verDetalles(incidencia)">VER DETALLES</button>   
         
     </div>
     <div class="incident-status">
