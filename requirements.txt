@@ -1,6 +1,7 @@
-Flask==2.2.2
+Flask==2.2.3
+gunicorn==20.1.0
+Flask-Cors==5.0.1
 Flask-Session==0.4.0
 mysql-connector-python==8.0.28
-gunicorn==20.1.0  
-Flask-Cors==5.0.1
+werkzeug==2.1.2
 
