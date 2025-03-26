@@ -10,8 +10,8 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)  
 
 #fuera del deployd
-# from flask_app_rest import app as rest_app
-from .flask_app_rest import app as rest_app
+from flask_app_rest import app as rest_app
+# from .flask_app_rest import app as rest_app
 app.register_blueprint(rest_app)
 
 # @app.route("/")
