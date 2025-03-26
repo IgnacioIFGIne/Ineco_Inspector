@@ -9,12 +9,14 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)  
 
-from flask_app_rest import app as rest_app
+#fuera del deployd
+# from flask_app_rest import app as rest_app
+from .flask_app_rest import app as rest_app
 app.register_blueprint(rest_app)
 
-@app.route("/")
-def inicio():
-    return render_template("index.html")
+# @app.route("/")
+# def inicio():
+#     return render_template("index.html")
 
 
 # Iniciar la aplicación en modo debug
