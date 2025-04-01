@@ -3,7 +3,7 @@ import modelo.conexion
 #-------------------METODOS GET-------------------
 def obtener_incidencias():
     conexion = modelo.conexion.conectar()
-    sql = "SELECT * FROM incidencias"
+    sql = "SELECT * FROM incidencias ORDER BY id DESC"
     cursor = conexion.cursor(dictionary=True)
     cursor.execute(sql)
     incidencias = cursor.fetchall()

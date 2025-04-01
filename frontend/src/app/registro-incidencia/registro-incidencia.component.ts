@@ -31,6 +31,7 @@ export class RegistroIncidenciaComponent {
 
   inciOk():void{
     alert("incidencia registrada con exito");
+    this.dialogRef.close();
   }
 
   close(): void {
