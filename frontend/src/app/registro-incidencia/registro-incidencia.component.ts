@@ -6,7 +6,6 @@ import { InspectorService } from '../services/inspector.service';
 import { FormsModule, NgModel } from '@angular/forms';
 
 
-
 @Component({
   selector: 'app-registro-incidencia',
   standalone: true,
@@ -31,6 +30,7 @@ export class RegistroIncidenciaComponent {
 
   inciOk():void{
     alert("incidencia registrada con exito");
+    //todo: reload
     this.dialogRef.close();
   }
 

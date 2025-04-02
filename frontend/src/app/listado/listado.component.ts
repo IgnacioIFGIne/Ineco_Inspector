@@ -33,10 +33,6 @@ export class ListadoComponent {
 
 
 
-
-
-
-
 // import { Component } from '@angular/core';
 // import { Incidencia } from '../model/incidencia';
 // import { InspectorService } from '../services/inspector.service';

@@ -18,7 +18,6 @@ export class DetallesIncidenciaComponent {
   id_incidencia: number = -1
   incidencia: Incidencia = {} as Incidencia
 
-
   constructor(private servicioInspector: InspectorService, private activatedRoute: ActivatedRoute, private dialog: MatDialog,   private router: Router) {}
 
   //obtiene la incidencia de la base de datos a apartir de una id

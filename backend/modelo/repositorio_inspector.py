@@ -14,7 +14,6 @@ def obtener_incidencias():
     for incidencia in incidencias:
         print(incidencia["elemento"], incidencia["instalacion"], incidencia["ubicacion"], incidencia["tipo"], incidencia["estado"])
   
-  
     return incidencias
     
 def obtener_incidencia_id(id):
