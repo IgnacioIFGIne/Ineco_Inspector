@@ -31,6 +31,8 @@ export class DetallesIncidenciaComponent {
       data: { incidencia: incidencia },
       disableClose: true
     });
+    
+
   
     dialogRef.afterClosed().subscribe(result => { 
       if (result) { //result si se ha confirmado la edicion
@@ -38,7 +40,15 @@ export class DetallesIncidenciaComponent {
       }
     });
 
+
   }
-  
+
+  exportarIncidencia(incidencia: Incidencia) {
+    alert:("TODO: exportar incidencia");
+    
+
+
+  }
 
 }
+ 

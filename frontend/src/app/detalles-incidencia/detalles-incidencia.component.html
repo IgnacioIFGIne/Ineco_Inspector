@@ -13,7 +13,7 @@
         <h1>INECO INSPECTOR</h1>
       </div>
       <div class="header-right">
-        <button title="Exportar"><i class='bx bx-download'></i></button>
+        <button (click)="exportarIncidencia(incidencia)" title="Exportar"><i class='bx bx-download'></i></button>
         <button title="Importar"><i class='bx bx-upload'></i></button>
         <button title="Imprimir"><i class='bx bx-printer'></i></button>
       </div>
@@ -72,6 +72,7 @@
         <div class="detail-item">
           <h3>Fotos</h3>
           <div class="photos-box">
+            <!-- <img src = "../../assets/images/{{i.id}}.jpg" alt="Foto de la incidencia"> -->
             <p>No hay fotos para esta incidencia</p>
           </div>
         </div>
