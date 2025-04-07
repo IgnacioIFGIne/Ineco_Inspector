@@ -17,6 +17,7 @@ export class DetallesIncidenciaComponent {
 
   id_incidencia: number = -1
   incidencia: Incidencia = {} as Incidencia
+  fotoError: boolean = false;
 
   constructor(private servicioInspector: InspectorService, private activatedRoute: ActivatedRoute, private dialog: MatDialog,   private router: Router) {}
 
@@ -39,7 +40,6 @@ export class DetallesIncidenciaComponent {
         this.router.navigate(['/listado']); 
       }
     });
-
 
   }
 

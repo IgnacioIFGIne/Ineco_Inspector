@@ -31,17 +31,28 @@ def obtener_incidencia_id(id):
 
 
 #-------------------METODOS POST-------------------
-
-
 def registrar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones):
     conexion = modelo.conexion.conectar()
     sql = "INSERT INTO incidencias (elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     values = (elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones)
     cursor = conexion.cursor()
     cursor.execute(sql, values)
+    id_generado = cursor.lastrowid  # generamos el id
     conexion.commit()
     cursor.close()
     conexion.close()
+    return id_generado  # lo devuelvo para que lo pille la img
+
+
+# def registrar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones):
+#     conexion = modelo.conexion.conectar()
+#     sql = "INSERT INTO incidencias (elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+#     values = (elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones)
+#     cursor = conexion.cursor()
+#     cursor.execute(sql, values)
+#     conexion.commit()
+#     cursor.close()
+#     conexion.close()
     
 def actualizar_incidencia(elemento, instalacion, ubicacion, tipo, estado, fecha, observaciones, id):
     

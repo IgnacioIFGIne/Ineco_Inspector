@@ -72,8 +72,8 @@
         <div class="detail-item">
           <h3>Fotos</h3>
           <div class="photos-box">
-            <!-- <img src = "../../assets/images/{{i.id}}.jpg" alt="Foto de la incidencia"> -->
-            <p>No hay fotos para esta incidencia</p>
+            <img src = "backend/static/imagesIncidencias/{{incidencia.id}}.jpg" alt="Foto de la incidencia" (error)="fotoError=true">
+            <p *ngIf="fotoError">No hay fotos para esta incidencia</p>
           </div>
         </div>
       </div>
