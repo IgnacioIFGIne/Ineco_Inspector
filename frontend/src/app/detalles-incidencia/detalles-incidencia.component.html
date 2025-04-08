@@ -2,7 +2,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INECO INSPECTOR - Detalle de Incidencia</title>
-  <link rel="stylesheet" href="styles.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <div class="container">
@@ -14,7 +13,7 @@
       </div>
       <div class="header-right">
         <button (click)="exportarIncidencia(incidencia)" title="Exportar"><i class='bx bx-download'></i></button>
-        <button title="Importar"><i class='bx bx-upload'></i></button>
+        <button (click)="importarIncidencia()" title="Importar"><i class='bx bx-upload'></i></button>
         <button title="Imprimir"><i class='bx bx-printer'></i></button>
       </div>
     </header>
@@ -72,8 +71,7 @@
         <div class="detail-item">
           <h3>Fotos</h3>
           <div class="photos-box">
-            <img src = "backend/static/imagesIncidencias/{{incidencia.id}}.jpg" alt="Foto de la incidencia" (error)="fotoError=true">
-            <p *ngIf="fotoError">No hay fotos para esta incidencia</p>
+            <p>No hay fotos para esta incidencia</p>
           </div>
         </div>
       </div>
